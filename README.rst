@@ -1,6 +1,8 @@
 Realtime Redis Backup
 =====================
 
+.. image:: https://raw.githubusercontent.com/cr0hn/realtime-redis-backup/master/images/rrb-logo-250x250.png
+
 `Realtime Redis Backup` (RRB) watch for Redis changes in their keys and save in a storage system.
 
 Currently only S3 compatible storage is supported. If you want to collaborate you're welcome! (please check the `TODO <https://github.com/cr0hn/realtime-redis-backup/blob/master/TODO.rst>`_)
@@ -287,3 +289,5 @@ License
 =======
 
 This project is distributed under `BSD license <https://github.com/cr0hn/realtime-redis-backup/blob/master/LICENSE>`_
+
+Logo thanks to: `www.freepik.com <https://www.freepik.com/free-photos-vectors/logo>`_
