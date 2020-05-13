@@ -7,7 +7,7 @@ Currently only S3 compatible storage is supported. If you want to collaborate yo
 Motivation
 ==========
 
-Redis back system (or `Persistence <https://redis.io/topics/persistence>`_) takes snapshots of Redis data very X seconds. But:
+Redis back system (or `Persistence <https://redis.io/topics/persistence>`_) takes snapshots of Redis data very 'X' seconds. But:
 
 - Between 2 snapshot time you can loose data.
 - Data are stored in local file. If you want to save into different location (i.e. S3) you must do it your self.
