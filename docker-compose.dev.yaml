@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+
+  minio:
+    image: bitnami/minio:latest
+    environment:
+      - MINIO_DEFAULT_BUCKETS=redis-backup
+      - MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE
+      - MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    ports:
+      - 9200:9000
+
+  redis:
+    image: bitnami/redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - DISABLE_COMMANDS=FLUSHDB,FLUSHALL,CONFIG
+    command: /run.sh --maxmemory 300mb
+    ports:
+      - 6500:6379

@@ -1,0 +1,6 @@
+aiobotocore
+async-timeout
+
+aioredis
+aioredis-watchdog
+

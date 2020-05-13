@@ -1,0 +1,28 @@
+name: Build Pypi Artefacts
+
+on:
+  push:
+    branches:
+      - master
+#    paths:
+#      - "VERSION"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1  # v2 does not have submodules option now
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.8'
+
+      - name: Build distribution package
+        run: |
+          python3 -m pip install wheel twine
+          python3 setup.py sdist bdist_wheel
+
+      - name: Publish package to TestPyPI
+        env:
+          TWINE_USERNAME: ${{ secrets.pypi_user }}
+          TWINE_PASSWORD: ${{ secrets.pypi_password }}
+        run: twine upload dist/*
