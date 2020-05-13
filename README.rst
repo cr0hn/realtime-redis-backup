@@ -1,6 +1,3 @@
-Realtime Redis Backup
-=====================
-
 .. image:: https://raw.githubusercontent.com/cr0hn/realtime-redis-backup/master/images/rrb-logo-250x250.png
 
 `Realtime Redis Backup` (RRB) watch for Redis changes in their keys and save in a storage system.
