@@ -3,7 +3,15 @@ Realtime Redis Backup
 
 `Realtime Redis Backup` (RRB) watch for Redis changes in their keys and save in a storage system.
 
-Currently only S3 compatible storage is supported. If you want to collaborate you're welcome! (please check https://github.com/cr0hn/realtime-redis-backup/blob/master/TODO.rst>`_)
+Currently only S3 compatible storage is supported. If you want to collaborate you're welcome! (please check the `TODO <https://github.com/cr0hn/realtime-redis-backup/blob/master/TODO.rst>`_)
+
+Motivation
+==========
+
+Redis back system (or `Persistence <https://redis.io/topics/persistence>`_) takes snapshots of Redis data very X seconds. But:
+
+- Between 2 snapshot time you can loose data.
+- Data are stored in local file. If you want to save into different location (i.e. S3) you must do it your self.
 
 Install
 =======
@@ -271,6 +279,7 @@ You also can setup the concurrency:
 Limitations
 ===========
 
+- **VERY IMPORTANT**: Only one instance of `RRB` must be running at time. Otherwise each instance will overwrite data from Redis as many times as `RRD` instances.
 - Currently only watch for changes in string keys. This means that only watch for `SET` Redis command.
 - You can't mix in the same bucket data with `--versioning` flag and without them. If you mix these types first type read form S3 will be used as fomat.
 
