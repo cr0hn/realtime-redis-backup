@@ -71,7 +71,7 @@ You also can setup redis server by using environ var:
 
 .. code-block:: console
 
-$ docker run --rm -d -e S3_SERVER=http://localhost:9000 -e S3_BUCKET="my-backup" -e S3_SERVER=http://localhost:9000 -e S3_SECRET_KEY=XXXXXXXX -e S3_ACCESS_KEY=XXXXXXXX -e REDIS_SERVER=redis://localhost:6379/0 cr0hn/realtime-redis-backup
+    $ docker run --rm -d -e S3_SERVER=http://localhost:9000 -e S3_BUCKET="my-backup" -e S3_SERVER=http://localhost:9000 -e S3_SECRET_KEY=XXXXXXXX -e S3_ACCESS_KEY=XXXXXXXX -e REDIS_SERVER=redis://localhost:6379/0 cr0hn/realtime-redis-backup
 
 Advanced usage
 --------------
