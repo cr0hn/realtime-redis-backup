@@ -4,6 +4,11 @@
 
 Currently only S3 compatible storage is supported. If you want to collaborate you're welcome! (please check the `TODO <https://github.com/cr0hn/realtime-redis-backup/blob/master/TODO.rst>`_)
 
+Support this project
+====================
+
+Support this project (to solve issues, new features...) by applying the Github "Sponsor" button.
+
 Motivation
 ==========
 
